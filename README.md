@@ -24,4 +24,3 @@ npx serve .
 
 - Fill in the footer placeholders: company number, VAT number, contact email.
 - Point the `href="#"` links at real collection and product URLs.
-- The hero mills crop uses `object-view-box`, which only Chromium browsers support. Other browsers show the full shelf photo.
