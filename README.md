@@ -15,6 +15,11 @@ npx serve .
 1. Push this folder to a repository.
 2. Settings → Pages → Deploy from branch → `main` / root.
 
+## Layouts
+
+- Desktop and tablet: the full layout.
+- Phone (749px wide and under): a dedicated phone layout with stacked hero slides, a two-column product grid and a single-column footer. The switch happens automatically.
+
 ## Structure
 
 - `index.html`: the full page, styles and carousel script

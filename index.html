@@ -25,9 +25,15 @@ img{max-width:100%}
 .brand-track{animation:brand-scroll 45s linear infinite}
 @keyframes brand-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion: reduce){.ann-msg{animation:none}.ann-msg:first-child{opacity:1}.brand-track{animation:none}.hero-slide{transition:none}}
+
+.view-mobile{display:none}
+.view-mobile .brand-track{animation-duration:40s}
+.view-mobile .ann-msg{padding:0 16px;text-align:center}
+@media (max-width: 749px){.view-desktop{display:none}.view-mobile{display:block}}
 </style>
 </head>
 <body>
+<div class="view-desktop">
 <div style="font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 15px; color: #1A0089; background: #EFE7D3; min-width: 0">
 
 <div aria-label="Free UK delivery over £50. 30-day returns. Order by 1pm on weekdays for same-day dispatch." style="position: relative; height: 38px; overflow: hidden; background: #1A0089; color: #EFE7D3; font-size: 12px; letter-spacing: 0.04em">
@@ -167,7 +173,7 @@ img{max-width:100%}
 <section style="max-width: 1200px; margin: 80px auto 0; padding: 0 72px">
 <div style="background: #1A0089; color: #EFE7D3; border-radius: 28px; padding: 56px; display: flex; flex-wrap: wrap; gap: 40px">
 <div style="flex: 1 1 280px">
-<h2 style="margin: 0 0 14px; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1">Shop by what you need<span style="color: #B7CF4F">.</span></h2>
+<h2 style="margin: 0 0 14px; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1">Shop by category</h2>
 
 </div>
 <div style="flex: 2 1 600px; display: flex; flex-wrap: wrap; column-gap: 40px; align-content: flex-start">
@@ -222,36 +228,193 @@ img{max-width:100%}
 </footer>
 
 </div>
+</div>
+<div class="view-mobile">
+<div style="width: 100%; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 15px; color: #1A0089; background: #EFE7D3; overflow: hidden">
+
+<div aria-label="Free UK delivery over £50. 30-day returns. Order by 1pm on weekdays for same-day dispatch." style="position: relative; height: 34px; overflow: hidden; background: #1A0089; color: #EFE7D3; font-size: 11px; letter-spacing: 0.04em">
+<span class="ann-msg" aria-hidden="true">Free UK delivery over £50</span>
+<span class="ann-msg" aria-hidden="true">30-day returns</span>
+<span class="ann-msg" aria-hidden="true">Order by 1pm on weekdays for same-day dispatch</span>
+</div>
+
+<header style="padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="#" style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 1">Hestia</a>
+<div style="display: flex; align-items: center; gap: 4px">
+<button aria-label="Search" style="width: 44px; height: 44px; border: 0; background: transparent; color: #1A0089; display: flex; align-items: center; justify-content: center; padding: 0"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg></button>
+<a href="#" style="display: flex; align-items: center; height: 40px; padding: 0 14px; border-radius: 999px; background: #B7CF4F; font-size: 13px; font-weight: 600">Bag (0)</a>
+<button aria-label="Menu" style="width: 44px; height: 44px; border: 0; background: transparent; color: #1A0089; display: flex; align-items: center; justify-content: center; padding: 0"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+</div>
+</header>
+
+<section aria-roledescription="carousel" aria-label="Featured ranges" style="padding: 8px 20px 0">
+<div style="display: grid; overflow: hidden">
+<div class="hero-slide is-active" data-slide="0" style="grid-area: 1 / 1; display: flex; flex-direction: column; gap: 20px">
+<img src="assets/images/saucepan-on-stove.jpg" alt="A hand lifting a steel saucepan off a gas hob in a working kitchen" style="width: 100%; height: 340px; object-fit: cover; border-radius: 22px; display: block; object-position: 55% 50%">
+<h1 style="margin: 4px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 52px; line-height: 0.95; letter-spacing: -0.02em">Timeless<br>European<br>kitchenware.</h1>
+<p style="margin: 0; font-size: 15px; line-height: 1.55">Riedel glass, Bialetti moka pots, Zassenhaus mills and more. Held in our UK warehouse and packed by us.</p>
+<a href="#" style="display: flex; align-items: center; justify-content: center; height: 52px; background: #B7CF4F; color: #1A0089; border-radius: 999px; font-weight: 600">Shop glassware</a>
+<div style="display: flex; gap: 2px; margin-left: -10px">
+<button aria-label="Show slide 1" data-hero="0" style="width: 28px; height: 44px; border: 0; background: transparent; padding: 0; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="hero-dot is-on" data-dot="0"></span></button>
+<button aria-label="Show slide 2" data-hero="1" style="width: 28px; height: 44px; border: 0; background: transparent; padding: 0; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="hero-dot" data-dot="1"></span></button>
+<button aria-label="Show slide 3" data-hero="2" style="width: 28px; height: 44px; border: 0; background: transparent; padding: 0; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="hero-dot" data-dot="2"></span></button>
+</div>
+</div>
+<div class="hero-slide" data-slide="1" style="grid-area: 1 / 1; display: flex; flex-direction: column; gap: 20px">
+<img src="assets/images/hero-moka.jpg" alt="A Bialetti moka pot pouring coffee into a white espresso cup" style="width: 100%; height: 340px; object-fit: cover; border-radius: 22px; display: block; object-position: 50% 50%">
+<h2 style="margin: 4px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 52px; line-height: 0.95; letter-spacing: -0.02em">Moka pots<br>in every<br>size.</h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.55">Bialetti moka pots in various sizes, plus grinders, espresso cups and spare gaskets.</p>
+<a href="#" style="display: flex; align-items: center; justify-content: center; height: 52px; background: #B7CF4F; color: #1A0089; border-radius: 999px; font-weight: 600">Shop coffee &amp; tea</a>
+<div style="display: flex; gap: 2px; margin-left: -10px">
+<button aria-label="Show slide 1" data-hero="0" style="width: 28px; height: 44px; border: 0; background: transparent; padding: 0; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="hero-dot is-on" data-dot="0"></span></button>
+<button aria-label="Show slide 2" data-hero="1" style="width: 28px; height: 44px; border: 0; background: transparent; padding: 0; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="hero-dot" data-dot="1"></span></button>
+<button aria-label="Show slide 3" data-hero="2" style="width: 28px; height: 44px; border: 0; background: transparent; padding: 0; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="hero-dot" data-dot="2"></span></button>
+</div>
+</div>
+<div class="hero-slide" data-slide="2" style="grid-area: 1 / 1; display: flex; flex-direction: column; gap: 20px">
+<img src="assets/images/hero-mills.jpg" alt="A wooden pepper mill and glass salt shakers on a wooden shelf" style="width: 100%; height: 340px; object-fit: cover; border-radius: 22px; display: block; object-position: 50% 50%">
+<h2 style="margin: 4px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 52px; line-height: 0.95; letter-spacing: -0.02em">Pepper,<br>salt and<br>everyday tools.</h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.55">Pepper and salt mills, preserving jars and the kitchen tools you reach for every day.</p>
+<a href="#" style="display: flex; align-items: center; justify-content: center; height: 52px; background: #B7CF4F; color: #1A0089; border-radius: 999px; font-weight: 600">Shop mills &amp; tools</a>
+<div style="display: flex; gap: 2px; margin-left: -10px">
+<button aria-label="Show slide 1" data-hero="0" style="width: 28px; height: 44px; border: 0; background: transparent; padding: 0; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="hero-dot is-on" data-dot="0"></span></button>
+<button aria-label="Show slide 2" data-hero="1" style="width: 28px; height: 44px; border: 0; background: transparent; padding: 0; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="hero-dot" data-dot="1"></span></button>
+<button aria-label="Show slide 3" data-hero="2" style="width: 28px; height: 44px; border: 0; background: transparent; padding: 0; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="hero-dot" data-dot="2"></span></button>
+</div>
+</div>
+</div>
+</section>
+
+<section style="padding: 32px 20px 0; display: flex; flex-direction: column; gap: 12px">
+<a href="#" style="background: #1A0089; color: #EFE7D3; border-radius: 22px; padding: 22px 24px; min-height: 116px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px"><span style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 32px; line-height: 1">Glass &amp; tableware</span><span style="font-size: 13px">Drinkware, serveware →</span></a>
+<a href="#" style="background: #FF5E33; color: #1A0089; border-radius: 22px; padding: 22px 24px; min-height: 116px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px"><span style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 32px; line-height: 1">Coffee &amp; tea</span><span style="font-size: 13px">Coffee and tea equipment →</span></a>
+<a href="#" style="background: #FFFFFF; color: #1A0089; border-radius: 22px; padding: 22px 24px; min-height: 116px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px"><span style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 32px; line-height: 1">Mills &amp; tools</span><span style="font-size: 13px">Pepper and salt mills, plus everyday tools →</span></a>
+</section>
+
+<section style="padding: 56px 20px 0">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; margin-bottom: 20px">
+<h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 36px; line-height: 1">Popular right now</h2>
+<a href="#" style="display: flex; align-items: center; min-height: 44px; font-size: 13px; font-weight: 600; text-decoration: underline; text-underline-offset: 4px">View all</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 12px">
+<a href="#" style="display: flex; flex-direction: column; gap: 4px; min-width: 0">
+<div style="aspect-ratio: 4 / 5; background: #FFFFFF; border-radius: 16px; overflow: hidden"><img src="assets/images/riedel-extreme-pinot.webp" alt="Two Riedel Extreme Pinot Noir glasses, one with red wine" style="width: 100%; height: 100%; object-fit: contain; padding: 14px; box-sizing: border-box; mix-blend-mode: multiply; display: block"></div>
+<span style="margin-top: 8px; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase">Riedel</span>
+<span style="font-size: 13px; line-height: 1.35">Extreme Pinot Noir, set of 2</span>
+<span style="font-size: 13px; font-weight: 600">£49.99</span>
+</a>
+<a href="#" style="display: flex; flex-direction: column; gap: 4px; min-width: 0">
+<div style="aspect-ratio: 4 / 5; background: #FFFFFF; border-radius: 16px; overflow: hidden"><img src="assets/images/bormioli-globo-cappuccino.webp" alt="Luigi Bormioli Globo double-walled cappuccino glass" style="width: 100%; height: 100%; object-fit: contain; padding: 14px; box-sizing: border-box; mix-blend-mode: multiply; display: block"></div>
+<span style="margin-top: 8px; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase">Luigi Bormioli</span>
+<span style="font-size: 13px; line-height: 1.35">Drink&amp;Design Globo Cappuccino/Tea 23 cl, set of 6</span>
+<span style="font-size: 13px; font-weight: 600">£64.99</span>
+</a>
+<a href="#" style="display: flex; flex-direction: column; gap: 4px; min-width: 0">
+<div style="aspect-ratio: 4 / 5; background: #FFFFFF; border-radius: 16px; overflow: hidden"><img src="assets/images/duralex-lys-plate-green.webp" alt="Duralex Lys dessert plate in green glass" style="width: 100%; height: 100%; object-fit: contain; padding: 14px; box-sizing: border-box; mix-blend-mode: multiply; display: block"></div>
+<span style="margin-top: 8px; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase">Duralex</span>
+<span style="font-size: 13px; line-height: 1.35">Lys dessert plate, 19 cm, green, set of 6</span>
+<span style="font-size: 13px; font-weight: 600">£17.99</span>
+</a>
+<a href="#" style="display: flex; flex-direction: column; gap: 4px; min-width: 0">
+<div style="aspect-ratio: 4 / 5; background: #FFFFFF; border-radius: 16px; overflow: hidden"><img src="assets/images/riedel-amadeo-decanter.webp" alt="Riedel Amadeo decanter with red wine" style="width: 100%; height: 100%; object-fit: contain; padding: 14px; box-sizing: border-box; mix-blend-mode: multiply; display: block"></div>
+<span style="margin-top: 8px; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase">Riedel</span>
+<span style="font-size: 13px; line-height: 1.35">Amadeo Decanter</span>
+<span style="font-size: 13px; font-weight: 600">£605.99</span>
+</a>
+</div>
+</section>
+
+<section style="padding: 56px 20px 0">
+<div style="background: #1A0089; color: #EFE7D3; border-radius: 22px; padding: 28px 22px 16px">
+<h2 style="margin: 0 0 8px; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 34px; line-height: 1; margin-top: 5px; margin-bottom: 15px">Shop by category</h2>
+<div style="display: flex; flex-direction: column">
+<a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; color: #EFE7D3; border-bottom: 1px solid #4A3AA8; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 22px; line-height: 1.1"><span>Coffee &amp; tea</span><span aria-hidden="true" style="color: rgb(255, 94, 51); font-family: &quot;Instrument Sans&quot;, system-ui, sans-serif; font-size: 16px">→</span></a>
+<a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; color: #EFE7D3; border-bottom: 1px solid #4A3AA8; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 22px; line-height: 1.1"><span>Wine &amp; champagne glasses</span><span aria-hidden="true" style="color: #FF5E33; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 16px">→</span></a>
+<a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; color: #EFE7D3; border-bottom: 1px solid #4A3AA8; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 22px; line-height: 1.1"><span>Everyday glasses</span><span aria-hidden="true" style="color: #FF5E33; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 16px">→</span></a>
+<a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; color: #EFE7D3; border-bottom: 1px solid #4A3AA8; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 22px; line-height: 1.1"><span>Serveware</span><span aria-hidden="true" style="color: #FF5E33; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 16px">→</span></a>
+<a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; color: #EFE7D3; border-bottom: 1px solid #4A3AA8; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 22px; line-height: 1.1"><span>Cutlery</span><span aria-hidden="true" style="color: #FF5E33; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 16px">→</span></a>
+<a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; color: #EFE7D3; border-bottom: 1px solid #4A3AA8; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 22px; line-height: 1.1"><span>Mills &amp; storage</span><span aria-hidden="true" style="color: #FF5E33; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 16px">→</span></a>
+</div>
+</div>
+</section>
+
+<section style="padding: 56px 20px; text-align: center">
+<p style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase">About Hestia</p>
+<h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 35px; line-height: 1.02">Europe’s timeless homeware brands, in one place.</h2>
+<p style="margin: 18px auto 0; font-size: 12px; line-height: 1.6">In stock and ready to ship. Free UK delivery over £50.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 28px">
+<span style="background: #FF5E33; border-radius: 999px; padding: 10px 16px; font-size: 13px; font-weight: 500">Shipped from the UK</span>
+<span style="background: #B7CF4F; border-radius: 999px; padding: 10px 16px; font-size: 13px; font-weight: 500">Same day dispatch</span>
+<span style="background: #FFFFFF; border-radius: 999px; padding: 10px 16px; font-size: 13px; font-weight: 500">Questions? Email us</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 36px">
+<img src="assets/images/upturned-glasses.jpg" alt="Rows of upturned wine glasses on a brown cloth" style="grid-column: 1 / span 2; width: 349px; height: 218px; object-fit: cover; border-radius: 18px; display: block; object-position: 0% 0%; object-view-box: inset(0% 0.2855% 6.601% 0%)">
+<img src="assets/images/gilded-cutlery.jpg" alt="Gold cutlery tangled together on deep blue velvet" style="width: 100%; height: 200px; object-fit: cover; border-radius: 18px; display: block; object-position: 50% 33%">
+<img src="assets/images/shell-dishes.jpg" alt="Silver shell butter dishes between stacks of white bowls and saucers" style="width: 100%; height: 200px; object-fit: cover; border-radius: 18px; display: block; object-position: 50% 40%">
+</div>
+</section>
+
+<section aria-label="Brands we stock" style="border-top: 1.5px solid #1A0089; border-bottom: 1.5px solid #1A0089">
+<div style="overflow: hidden; padding: 20px 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 24px; white-space: nowrap"><div class="brand-track" style="display: flex; width: max-content"><div style="display: flex; align-items: center; gap: 28px; padding-right: 28px; flex-shrink: 0"><span>Riedel</span><span aria-hidden="true" style="color: #B7CF4F">✳</span><span>Bialetti</span><span aria-hidden="true" style="color: #FF5E33">✳</span><span>Zassenhaus</span><span aria-hidden="true" style="color: #B7CF4F">✳</span><span>Duralex</span><span aria-hidden="true" style="color: #FF5E33">✳</span><span>Bormioli Rocco</span><span aria-hidden="true" style="color: #B7CF4F">✳</span><span>Alexander Home</span><span aria-hidden="true" style="color: #FF5E33">✳</span></div><div aria-hidden="true" style="display: flex; align-items: center; gap: 28px; padding-right: 28px; flex-shrink: 0"><span>Riedel</span><span aria-hidden="true" style="color: #B7CF4F">✳</span><span>Bialetti</span><span aria-hidden="true" style="color: #FF5E33">✳</span><span>Zassenhaus</span><span aria-hidden="true" style="color: #B7CF4F">✳</span><span>Duralex</span><span aria-hidden="true" style="color: #FF5E33">✳</span><span>Bormioli Rocco</span><span aria-hidden="true" style="color: #B7CF4F">✳</span><span>Alexander Home</span><span aria-hidden="true" style="color: #FF5E33">✳</span></div></div></div>
+</section>
+
+<footer style="padding: 48px 20px 28px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 32px; line-height: 1">New ranges, restocks and offers.</h2>
+<p style="margin: 0; font-size: 14px; line-height: 1.55">Sign up for the latest launches, limited editions and restocks.</p>
+<label for="m-email" style="margin-top: 4px; font-size: 13px; font-weight: 500">Email address</label>
+<input id="m-email" type="email" placeholder="you@example.com" style="width: 100%; box-sizing: border-box; height: 52px; border: 1.5px solid #1A0089; border-radius: 999px; padding: 0 20px; background: transparent; font: inherit; color: #1A0089">
+<button style="height: 52px; border: 0; border-radius: 999px; background: #B7CF4F; color: #1A0089; font: inherit; font-weight: 600">Sign up</button>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 44px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h3 style="margin: 0 0 6px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase">Shop</h3>
+<a href="#" style="padding: 6px 0">Glass &amp; tableware</a><a href="#" style="padding: 6px 0">Coffee &amp; tea</a><a href="#" style="padding: 6px 0">Tools &amp; gadgets</a><a href="#" style="padding: 6px 0">Flasks &amp; picnic</a><a href="#" style="padding: 6px 0">Cookware</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h3 style="margin: 0 0 6px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase">Help</h3>
+<a href="#" style="padding: 6px 0">Shipping</a><a href="#" style="padding: 6px 0">Returns</a><a href="#" style="padding: 6px 0">Contact</a><a href="#" style="padding: 6px 0">About</a><a href="#" style="padding: 6px 0">Privacy policy</a>
+</div>
+</div>
+<div style="margin-top: 48px; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 96px; line-height: 0.8; letter-spacing: -0.03em">Hestia<span style="color: #B7CF4F">.</span></div>
+<div style="margin-top: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 12px"><span>© 2026 Hestia Homeware and Kitchen Supplies</span><a href="#">Terms and policies</a></div>
+</footer>
+
+</div>
+</div>
 <script>
 (function () {
-  var slides = Array.prototype.slice.call(document.querySelectorAll('.hero-slide'));
-  var dots = Array.prototype.slice.call(document.querySelectorAll('.hero-dot'));
-  var current = 0, timer = null;
-  function show(i) {
-    var next = (i + slides.length) % slides.length;
-    slides.forEach(function (el, n) {
-      el.classList.toggle('is-active', n === next);
-      el.classList.toggle('is-leaving', n === current && n !== next);
-      el.setAttribute('aria-hidden', n === next ? 'false' : 'true');
-      el.inert = n !== next;
+  document.querySelectorAll('[aria-roledescription="carousel"]').forEach(function (root) {
+    var slides = Array.prototype.slice.call(root.querySelectorAll('.hero-slide'));
+    var dots = Array.prototype.slice.call(root.querySelectorAll('.hero-dot'));
+    if (slides.length < 2) return;
+    var current = 0, timer = null;
+    function show(i) {
+      var next = (i + slides.length) % slides.length;
+      slides.forEach(function (el, n) {
+        el.classList.toggle('is-active', n === next);
+        el.classList.toggle('is-leaving', n === current && n !== next);
+        el.setAttribute('aria-hidden', n === next ? 'false' : 'true');
+        el.inert = n !== next;
+      });
+      dots.forEach(function (d) { d.classList.toggle('is-on', Number(d.dataset.dot) === next); });
+      current = next;
+    }
+    function start() {
+      clearInterval(timer);
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      timer = setInterval(function () { show(current + 1); }, 7000);
+    }
+    root.querySelectorAll('[data-hero]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var v = btn.dataset.hero;
+        show(v === 'next' ? current + 1 : v === 'prev' ? current - 1 : Number(v));
+        start();
+      });
     });
-    dots.forEach(function (d) { d.classList.toggle('is-on', Number(d.dataset.dot) === next); });
-    current = next;
-  }
-  function start() {
-    clearInterval(timer);
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    timer = setInterval(function () { show(current + 1); }, 7000);
-  }
-  document.querySelectorAll('[data-hero]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var v = btn.dataset.hero;
-      show(v === 'next' ? current + 1 : v === 'prev' ? current - 1 : Number(v));
-      start();
-    });
+    show(0);
+    start();
   });
-  show(0);
-  start();
 })();
 </script>
 </body>
